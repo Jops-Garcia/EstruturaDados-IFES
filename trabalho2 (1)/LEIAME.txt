@@ -1,0 +1,11 @@
+Para compilar este programa é necessário utilizar o devido comando:
+"gcc -Wall -pedantic -o nomedoexe.exe hanoi.c lib.c"
+
+onde "nomedoexe".exe pode ser qualquer que preferir.
+
+Para executar, utilize como argumento a quantidade de discos e se caso desejar ver os movimentos nescessários "-v"
+
+Exemplo:./hanoi.exe 3 -v
+para ver os movimentos de uma torre de 3 discos.
+
+nota: os testes vão até o 38 mas não foi parado por erro, mas no ritmo que estava eu teria que deixar o computador ligado por um dia inteiro só para gerar aquele resultado e então mais ainda para o próximo.

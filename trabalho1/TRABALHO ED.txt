@@ -1,0 +1,41 @@
+1. O objetivo deste trabalho é desenvolver um novo tipo lista utilizando structs, ponteiros e
+alocacao dinamica de memoria.
+2. A sua lista deve armazenar valores do tipo inteiro.
+3. Crie um modulo list.h , list.c , celula.c e celula.h com guarda de inclusao.
+4. teste seu codigo antes de enviar, NAO ENVIE SEUS TESTES[nao quero nenhum MAIN], somente as bibliotecas e seus .h
+
+A) O que fazer?
+
+1. Utilizando struct, crie um cabecalho para a lista, contendo as seguintes informacoes: tamanho atual da lista, ponteiro para primeiro elemento e ponteiro para o ultimo elemento. Utilize uma estrutura opaca para esconder a implementacao do seu tipo lista.
+
+2. Utilizando struct crie um novo tipo para representar uma celula de uma lista com encadeamento simples. Nao exponha essa estrutura na interface da lista.
+
+3. Implemente, NO MINIMO, as funcoes abaixo para a sua nova lista:
+
+(a) Criacao de uma lista vazia.
+(b) Tamanho da lista.
+(c) Insercao de um elemento em uma posicao qualquer.
+(d) Remocao de um elemento de uma posicao qualquer.
+(e) Impressao da lista.
+(f) Desalocacao da lista.
+
+siga os EXATAMENTE os seguintes cabecalhos [se quiser criar mais coisas para auxiliar, fique a vontade, mas ESSES devem ser seguidos A RISCA]:  Trabalhos que fujam disso serao AUTOMATICAMENTE ZERADOS
+
+
+/*cria uma lista */
+List* create_list();
+
+/* retorna o tamanho da lista */
+int size_list(List *lst);
+
+/* insere na posicao POS da lista LST o elemento INFO , se for uma POS abaixo de 1 , deve ser inserida antes da primeira posicao, se for acima do tamanho atual da lista, deve ser inserida apos a ultima posicao */
+void insert_list(List *lst, int info, int pos);
+
+/* remove o elemento na posicao POS da lista , caso nao exista a posicao POS, deve ser usado 'printf("posicao nao encontrada\n");' */
+void remove_list(List *lst, int pos);
+
+/* imprime todos os nodos da lista, se a lista estiver vazia nao deve imprimir NADA */
+void print_list(List *lst);
+
+/*libera a lista completamente liberando todos os nodos internos da mesma */
+void free_list(List *lst);
